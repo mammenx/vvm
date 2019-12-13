@@ -1,7 +1,9 @@
 #ifndef __VVM_ROOT
 #define __VVM_ROOT
 
-template<class  DUT_T>  class vvm_root  {
+#include  "base/vvm_component.h"
+
+template<class  DUT_T>  class vvm_root  : vvm_component {
   private:
     static  DUT_T*  dut_ref;
 
