@@ -3,9 +3,8 @@
 #include  <string>
 
 template<class DUT_T>  vvm_status_t  vvm_clk_gen<DUT_T>::add_dut_clock(std::string name, unsigned  char* dut_clk_ref,  unsigned  int period, unsigned int init_val, unsigned int start_delay)  {
-  vvm_clk clk_info;
+  vvm_clk clk_info(name);
 
-  clk_info.name         = name;
   clk_info.dut_clk_ref  = dut_clk_ref;
   clk_info.phase0_steps = period  / 2;
   clk_info.phase1_steps = period  - clk_info.phase0_steps;
